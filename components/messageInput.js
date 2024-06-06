@@ -9,7 +9,12 @@ const MessageInput = () => {
 
   const sendMessage = () => {
     if (message.trim()) {
-      dispatch(addMessageWithTimeout({ text: message }));
+      dispatch(
+        addMessageWithTimeout({
+          text: message,
+          date: new Date().toISOString(),
+        })
+      );
       setMessage("");
     }
   };

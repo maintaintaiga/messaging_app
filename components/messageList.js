@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchMessages } from "@/lib/messageSlice";
 
@@ -12,6 +12,8 @@ const MessageList = () => {
   useEffect(() => {
     dispatch(fetchMessages());
   }, [dispatch]);
+
+  console.log("messages: ", messages);
 
   return (
     <ul className="space-y-2 p-4">
