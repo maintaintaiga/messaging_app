@@ -7,7 +7,7 @@ module.exports = {
       script: "npm",
       args: "start",
       cwd: "/etc/kate/message-app/server",
-      name: "Movie-Browse",
+      name: "Message-app",
       port: "4006",
       instances: 1,
       autorestart: true,
